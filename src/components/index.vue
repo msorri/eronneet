@@ -73,13 +73,12 @@
             // Resignations this month
             axios
                 .get('https://cors-anywhere.herokuapp.com/http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + currentDate.format('DD.MM.YYYY') + '&end=' + currentDate.format('DD.MM.YYYY') + '&accumulate=false')
-                //.get('http://localhost:8080/DEV_ONLY/rs-' + currentDate.format('DD.MM.YYYY') + '-' + currentDate.format('DD.MM.YYYY') + '.txt')
                 .then(response => (this.resignedToday = response.data.totalCount));
             this.interval = setInterval(() => {
                 axios
                     .get('https://cors-anywhere.herokuapp.com/http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + currentDate.format('DD.MM.YYYY') + '&end=' + currentDate.format('DD.MM.YYYY') + '&accumulate=false')
                     .then(response => (this.resignedToday = response.data.totalCount));
-            }, 5000);
+            }, 7000);
 
             // Resignations this week
             axios
@@ -89,7 +88,7 @@
                 axios
                     .get('https://cors-anywhere.herokuapp.com/http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + weekStartDate.format('DD.MM.YYYY') + '&end=' + weekEndDate.format('DD.MM.YYYY') + '&accumulate=false')
                     .then(response => (this.resignedThisWeek = response.data.totalCount));
-            }, 5000);
+            }, 7000);
 
             // Resignations this month
             axios
@@ -99,7 +98,7 @@
                 axios
                     .get('https://cors-anywhere.herokuapp.com/http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + monthStartDate.format('DD.MM.YYYY') + '&end=' + monthEndDate.format('DD.MM.YYYY') + '&accumulate=false')
                     .then(response => (this.resignedThisMonth = response.data.totalCount));
-            }, 5000);
+            }, 7000);
         }
     }
 </script>
