@@ -1,31 +1,6 @@
-# kirkkokakka
+# eronneet
 
-1. eroakirkosta.fi tiedot
-2. hieno sivusto
-3. ???
-4. profit 
+Kirkosta eronneet. Päivittyy reaaliajassa.
 
-## asennus
-```
-yarn install
-```
-
-### kehitys
-```
-yarn run serve
-```
-
-### prod
-```
-yarn run build
-```
-
-### testit (lol kuka niitä muka tekee)
-```
-yarn run test
-```
-
-### eslint (phpstorm hoitaa)
-```
-yarn run lint
-```
+Tiedot: eroakirkosta.fi (proxytetty cors-anywheren kautta koska erään sivuston ylläpitäjät eivät ole
+vieläkään saaneet CORS-headereita sivuille)
