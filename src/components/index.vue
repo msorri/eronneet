@@ -58,7 +58,7 @@
         },
         data() {
             return {
-                resignedToday: 0,
+                resignedToday: 0,   
                 resignedThisWeek: 0,
                 resignedThisMonth: 0
             }
@@ -72,31 +72,31 @@
 
             // Resignations this month
             axios
-                .get('http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + currentDate.format('DD.MM.YYYY') + '&end=' + currentDate.format('DD.MM.YYYY') + '&accumulate=false')
+                .get('https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + currentDate.format('DD.MM.YYYY') + '&end=' + currentDate.format('DD.MM.YYYY') + '&accumulate=false')
                 .then(response => (this.resignedToday = response.data.totalCount));
             this.interval = setInterval(() => {
                 axios
-                    .get('http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + currentDate.format('DD.MM.YYYY') + '&end=' + currentDate.format('DD.MM.YYYY') + '&accumulate=false')
+                    .get('https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + currentDate.format('DD.MM.YYYY') + '&end=' + currentDate.format('DD.MM.YYYY') + '&accumulate=false')
                     .then(response => (this.resignedToday = response.data.totalCount));
             }, 7000);
 
             // Resignations this week
             axios
-                .get('http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + weekStartDate.format('DD.MM.YYYY') + '&end=' + weekEndDate.format('DD.MM.YYYY') + '&accumulate=false')
+                .get('https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + weekStartDate.format('DD.MM.YYYY') + '&end=' + weekEndDate.format('DD.MM.YYYY') + '&accumulate=false')
                 .then(response => (this.resignedThisWeek = response.data.totalCount));
             this.interval = setInterval(() => {
                 axios
-                    .get('http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + weekStartDate.format('DD.MM.YYYY') + '&end=' + weekEndDate.format('DD.MM.YYYY') + '&accumulate=false')
+                    .get('https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + weekStartDate.format('DD.MM.YYYY') + '&end=' + weekEndDate.format('DD.MM.YYYY') + '&accumulate=false')
                     .then(response => (this.resignedThisWeek = response.data.totalCount));
             }, 7000);
 
             // Resignations this month
             axios
-                .get('http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + monthStartDate.format('DD.MM.YYYY') + '&end=' + monthEndDate.format('DD.MM.YYYY') + '&accumulate=false')
+                .get('https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + monthStartDate.format('DD.MM.YYYY') + '&end=' + monthEndDate.format('DD.MM.YYYY') + '&accumulate=false')
                 .then(response => (this.resignedThisMonth = response.data.totalCount));
             this.interval = setInterval(() => {
                 axios
-                    .get('http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + monthStartDate.format('DD.MM.YYYY') + '&end=' + monthEndDate.format('DD.MM.YYYY') + '&accumulate=false')
+                    .get('https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' + monthStartDate.format('DD.MM.YYYY') + '&end=' + monthEndDate.format('DD.MM.YYYY') + '&accumulate=false')
                     .then(response => (this.resignedThisMonth = response.data.totalCount));
             }, 7000);
         }
