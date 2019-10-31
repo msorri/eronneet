@@ -99,7 +99,7 @@ export default {
         // Resignations this month
         axios
             .get(
-                'https://cors-anywhere.herokuapp.com/http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                     currentDate.format('DD.MM.YYYY') +
                     '&end=' +
                     currentDate.format('DD.MM.YYYY') +
@@ -109,7 +109,7 @@ export default {
         this.interval = setInterval(() => {
             axios
                 .get(
-                    'https://cors-anywhere.herokuapp.com/http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                    'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                         currentDate.format('DD.MM.YYYY') +
                         '&end=' +
                         currentDate.format('DD.MM.YYYY') +
@@ -123,7 +123,7 @@ export default {
         // Resignations this week
         axios
             .get(
-                'https://cors-anywhere.herokuapp.com/http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                     weekStartDate.format('DD.MM.YYYY') +
                     '&end=' +
                     weekEndDate.format('DD.MM.YYYY') +
@@ -135,7 +135,7 @@ export default {
         this.interval = setInterval(() => {
             axios
                 .get(
-                    'https://cors-anywhere.herokuapp.com/http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                    'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                         weekStartDate.format('DD.MM.YYYY') +
                         '&end=' +
                         weekEndDate.format('DD.MM.YYYY') +
@@ -150,7 +150,7 @@ export default {
         // Resignations this month
         axios
             .get(
-                'https://cors-anywhere.herokuapp.com/http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                     monthStartDate.format('DD.MM.YYYY') +
                     '&end=' +
                     monthEndDate.format('DD.MM.YYYY') +
@@ -162,7 +162,7 @@ export default {
         this.interval = setInterval(() => {
             axios
                 .get(
-                    'https://cors-anywhere.herokuapp.com/http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                    'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                         monthStartDate.format('DD.MM.YYYY') +
                         '&end=' +
                         monthEndDate.format('DD.MM.YYYY') +
