@@ -16,5 +16,5 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
 </style>
