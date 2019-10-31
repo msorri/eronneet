@@ -105,7 +105,7 @@ export default {
         // Resignations this month
         axios
             .get(
-                'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                'https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                     currentDate.format('DD.MM.YYYY') +
                     '&end=' +
                     currentDate.format('DD.MM.YYYY') +
@@ -115,7 +115,7 @@ export default {
         this.interval = setInterval(() => {
             axios
                 .get(
-                    'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                    'https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                         currentDate.format('DD.MM.YYYY') +
                         '&end=' +
                         currentDate.format('DD.MM.YYYY') +
@@ -129,7 +129,7 @@ export default {
         // Resignations this week
         axios
             .get(
-                'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                'https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                     weekStartDate.format('DD.MM.YYYY') +
                     '&end=' +
                     weekEndDate.format('DD.MM.YYYY') +
@@ -141,7 +141,7 @@ export default {
         this.interval = setInterval(() => {
             axios
                 .get(
-                    'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                    'https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                         weekStartDate.format('DD.MM.YYYY') +
                         '&end=' +
                         weekEndDate.format('DD.MM.YYYY') +
@@ -156,7 +156,7 @@ export default {
         // Resignations this month
         axios
             .get(
-                'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                'https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                     monthStartDate.format('DD.MM.YYYY') +
                     '&end=' +
                     monthEndDate.format('DD.MM.YYYY') +
@@ -168,7 +168,7 @@ export default {
         this.interval = setInterval(() => {
             axios
                 .get(
-                    'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                    'https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                         monthStartDate.format('DD.MM.YYYY') +
                         '&end=' +
                         monthEndDate.format('DD.MM.YYYY') +
@@ -183,7 +183,7 @@ export default {
         // Resignations this year
         axios
             .get(
-                'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                'https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                     yearStartDate.format('DD.MM.YYYY') +
                     '&end=' +
                     yearEndDate.format('DD.MM.YYYY') +
@@ -195,7 +195,7 @@ export default {
         this.interval = setInterval(() => {
             axios
                 .get(
-                    'http://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
+                    'https://www.eroakirkosta.fi/dynamic/tilastot.php?start=' +
                         yearStartDate.format('DD.MM.YYYY') +
                         '&end=' +
                         yearEndDate.format('DD.MM.YYYY') +
