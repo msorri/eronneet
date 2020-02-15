@@ -16,7 +16,7 @@
         "vue-axios": "^2.1.4",
         "vue-moment": "^4.0.0",
         "vue-odometer": "^1.0.2",
-        "yarn": "^1.17.3"
+        "yarn": "^1.22.0"
     },
     "devDependencies": {
         "@vue/cli-plugin-babel": "^3.8.0",
